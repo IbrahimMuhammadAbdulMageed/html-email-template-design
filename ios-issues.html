@@ -1,0 +1,49 @@
+<!--
+
+IOS has two issues:
+
+1-  Resize text if font-size less than 13px;
+    The solution is:
+        Use -webkit-text-size-adjust:none;
+
+2-  [dates, times, phone numbers, addresses] display by blue color even if you do not this
+    The solution is:
+    a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
+
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <style>
+
+        p {
+            -webkit-text-size-adjust:none;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<p style="font-size: 5px">This text is font-size: 5px</p>
+<p style="color:red;">Address: <span style="text-decoration: underline;">Africa, Egypt, Cairo</span></p>
+</body>
+</html>
